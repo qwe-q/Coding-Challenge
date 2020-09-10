@@ -1,22 +1,19 @@
-# ACM Research Coding Challenge (Fall 2020)
+Enclosed in the main.py file is my solution to the ACM Research Coding Challenge #1. 
+This solution is implemented using the DBSCAN algorithm, an algorithm for grouping clusters of elements
+that is based on the density of related elements. This algorithm seemed the best fit for the prompt of "determin[ing]
+the number of clusters" as the challenge presented.
 
-## No Collaboration Policy
+This code should not be taken as a measure of my experience with CS algorithms... It isn't. What this is is a testament
+to my ability to problem solve and learn new ideas and methods. Without any prior knowledge on the subject of clustering,
+I managed to understand and implement DBSCAN in two days. I had a blast putting it all together!
 
-**You may not collaborate with anyone on this challenge.** You _are_ allowed to use Internet documentation. If you _do_ use existing code (either from Github, Stack Overflow, or other sources), **please cite your sources in the README**.
+The Epsilon and MinPoints values that the DBSCAN algorithm requires are declared as global variables at the top of the
+program. (This code isn't exactly the cleanest in the world.) I played around with these values a bit until I got a
+result I liked- my implementation and values are able to detect four main clusters, with one outlier in the middle, and the noise at
+the edges also being detected as a new cluster. You, the reviewer, are invited to play around with these values for
+yourself, and see what results the algorithm can bring you with different inputs.
 
-## Submission Procedure
+This code uses matplotlib to render the graph. Each cluster is rendered as a new color, which ends up looking quite
+nice. The default backend is used. 
 
-Please follow the below instructions on how to submit your answers.
-
-1. Create a **public** fork of this repo and name it `ACM-Research-Coding-Challenge`. To fork this repo, click the button on the top right and click the "Fork" button.
-2. Clone the fork of the repo to your computer using . `git clone [the URL of your clone]`. You may need to install Git for this (Google it).
-3. Complete the Challenge based on the instructions below.
-4. Email the link of your repo to research@acmutd.co with the same email you used to submit your application. Be sure to include your name in the email.
-
-## Question One
-
-![Image of Cluster Plot](ClusterPlot.png)
-<br/>
-Given the following dataset in `ClusterPlot.csv`, determine the number of clusters by using any clustering algorithm. **You're allowed to use any Python library you want to implement this**, just document which ones you used in this README file. Try to complete this as soon as possible.
-
-Regardless if you can or cannot answer the question, provide a short explanation of how you got your solution or how you think it can be solved in your README.md file.
+Also, it turned out that my solution was exactly 100 lines long. I had a laugh when I saw that!
